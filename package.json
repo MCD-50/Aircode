@@ -1,0 +1,45 @@
+{
+  "name": "air",
+  "displayName": "example",
+  "description": "my first extention",
+  "version": "0.0.1",
+  "publisher": "mcd-50",
+  "engines": {
+    "vscode": "^1.15.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.createRoom",
+    "onCommand:extension.joinRoom"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.createRoom",
+        "title": "Create Room"
+      },
+      {
+        "command": "extension.joinRoom",
+        "title": "Join Room"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0",
+    "mocha": "^2.3.3",
+    "eslint": "^3.6.0",
+    "@types/node": "^6.0.40",
+    "@types/mocha": "^2.2.32"
+  },
+  "dependencies": {
+    "socket.io": "^2.0.3"
+  }
+}
